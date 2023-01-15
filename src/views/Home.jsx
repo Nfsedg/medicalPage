@@ -210,7 +210,6 @@ export default function Home() {
       <main
         style={{
           width: "100%",
-          padding: "2rem 0",
         }}
       >
         <DialogCitas
@@ -220,11 +219,14 @@ export default function Home() {
         <Box
           sx={{
             width: "100%",
+            maxWidth: "600px",
             display: "flex",
             gap: "2rem",
+            margin: "0 auto",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            padding: "20px",
           }}
         >
           <Stack>
@@ -236,7 +238,6 @@ export default function Home() {
             </Typography>
           </Stack>
           <Stack sx={{
-            width: "100%",
             display: "flex",
             gap: "2rem",
             flexDirection: "row",
@@ -247,13 +248,11 @@ export default function Home() {
             <Button onClick={() => setOpenDialog(prev => !prev)} variant="outlined">Ver registros</Button>
           </Stack>
           <form
-            action=""
             style={{
               width: "100%",
               display: "flex",
               flexDirection: "column",
               gap: "1rem",
-              maxWidth: "600px",
               margin: "0 auto",
             }}
             onSubmit={handleOnSubmit}

@@ -19,6 +19,7 @@ import Swal from "sweetalert2";
 import { db } from "../firebase";
 import { collection, addDoc, onSnapshot } from "firebase/firestore";
 import DialogCitas from "./DialogCitas";
+import Sign from "./Sign";
 
 const speticialities = [
   {
@@ -373,6 +374,7 @@ export default function Home() {
             </LoadingButton>
           </form>
         </Box>
+        <Sign/>
       </main>
     </LocalizationProvider>
   );

@@ -52,7 +52,7 @@ export default function DialogCitas({ isOpen, onClose }) {
           ))}
         </>
       }
-      Actions={<Button variant="contained" onClick={onClose}>Cerrar</Button>}
+      Actions={<Button variant="contained" sx={{background: "#8cd600", fontWeight: 700}} onClick={onClose}>Cerrar</Button>}
     />
   );
 }

@@ -210,8 +210,7 @@ export default function Home() {
     <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={es}>
       <main
         style={{
-          width: "100%",
-          padding: "2rem 0",
+          padding: "20px",
         }}
       >
         <DialogCitas
@@ -221,23 +220,32 @@ export default function Home() {
         <Box
           sx={{
             width: "100%",
+            maxWidth: "600px",
             display: "flex",
             gap: "2rem",
+            margin: "0 auto",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
           }}
         >
           <Stack>
-            <Typography sx={{ textAlign: "center" }} variant="h5">
-              Cosultorio medico online
+            <Typography sx={{ textAlign: "center", fontWeight: 700 }} variant="h5">
+              Hospital Santa Clarita
             </Typography>
+            <Box sx={{margin: '10px'}}>
+              <Typography sx={{ textAlign: "center" }}>
+                  <b>Contacto:</b> 55 1234 5678
+              </Typography>
+              <Typography sx={{ textAlign: "center" }}>
+                  hospital@santaclarita.com
+              </Typography>
+            </Box>
             <Typography sx={{ textAlign: "center" }}>
               Llena los siguientes datos para crear una cita
             </Typography>
           </Stack>
           <Stack sx={{
-            width: "100%",
             display: "flex",
             gap: "2rem",
             flexDirection: "row",
@@ -245,16 +253,14 @@ export default function Home() {
             alignItems: "center",
           }}>
             <Typography>Registros realizados: {registros}</Typography>
-            <Button onClick={() => setOpenDialog(prev => !prev)} variant="outlined">Ver registros</Button>
+            <Button sx={{color: "#8cd600", border: "1px solid #8cd600", fontWeight: 700, width: "180px"}} onClick={() => setOpenDialog(prev => !prev)} variant="outlined">Ver registros</Button>
           </Stack>
           <form
-            action=""
             style={{
               width: "100%",
               display: "flex",
               flexDirection: "column",
               gap: "1rem",
-              maxWidth: "600px",
               margin: "0 auto",
             }}
             onSubmit={handleOnSubmit}
@@ -369,7 +375,7 @@ export default function Home() {
                 </Select>
               </FormControl>
             )}
-            <LoadingButton type="submit" loading={isSaving} variant="contained">
+            <LoadingButton sx={{background: "#8cd600", fontWeight: 700}} type="submit" loading={isSaving} variant="contained">
               Enviar
             </LoadingButton>
           </form>
